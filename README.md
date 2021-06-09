@@ -1,50 +1,34 @@
-# Timescale frontend interview assignment
+# Timescale Frontend Interview Assignment
 
-There are two parts to this assignment which should take around an hour to complete.
-The first part you will build out a travel blog profile page. The second part 
-you will need to manipulate data in arrays and objects in javascript.
+Thank you for taking the time to apply for a front end position at Timescale!
+Because we get hundreds of applicants for the front end positions, we are asking
+applicants to build a small React movie app. This exercise should take around
+3 hours to complete at a time of your choosing and should follow the instructions
+below. If you have any questions, feel free to reach out to use and we'll be happy
+to help. Happy hacking!
 
-## Travel blog
+## Assignment
 
-You will need to style a basic profile page for a travel blog. You will need to code the HTML for the page
-and style it. The page is using `create-react-app` to run and compile the page
+![Screenshot](./src/images/screenshot.png)
 
-### Setup
-```
-cd travel-blog
-yarn install
-yarn start
-```
+You are tasked with building a movie discovery app built in react. This app will
+display movies in a grid and give the user more information when they click on
+one of the posters. To fetch the movie info, we will be using [The Movie DB](https://developers.themoviedb.org/)
+and will include the API key for you to add to the `.env` in the initial email.
 
-### Restriction
+### Features
 
-There are a few restrictions in how you should be building the page:
-
-- Fonts and images are already imported for you
-- When naming your classes, try to follow the [BEM](http://getbem.com/introduction/) methodology
-- Styling variables are found at the top of the scss file (/travel-blog/src/App.scss)
-- Use css grid and flexbox to achieve the final layout
-- A responsive version is encouraged but not required (If you do a responsive version, you can just hide the navigation
- to make it easier)
+The main features that should be implemented
+- On the initial visit to the site, it will show the most recent movies
+- Allow users to put in a search term and display the results in the same grid
+- When a user clicks on one of the cards, open a modal and display more information about the movie
 
 
-### Finished result
+### The rules
 
-<img src="./images/final-image.png" alt="" />
+- Follow the [designs in Figma][figma] as closely as possible
+- Use **only** the packages provided in the package.json 
+- Site should have a simple responsive design
 
-## Javascript questions
 
-There are 4 functions that you will need to complete to modify the super hero data provided in 
-`javascript-questions/super-heroes.json`
-
-### Setup
-
-```
-cd javascript-questions
-yarn install
-yarn test
-```
-
-### Finished result
-
-All of the tests in the `/javascript-questions/test` directory should pass.
+[figma]: https://www.figma.com/file/KKkrDYSUAuRavpqRingRdZ/Movie-Grid?node-id=0%3A1
