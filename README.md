@@ -13,7 +13,7 @@ to help. Happy hacking!
 
 You are tasked with building a movie discovery app built in react. This app will
 display movies in a grid and give the user more information when they click on
-one of the posters. To fetch the movie info, we will be using [The Movie DB](https://developers.themoviedb.org/)
+one of the posters. To fetch the movie info, we will be using [The Movie DB][movieDB]
 and will include the API key for you to add to the `.env` in the initial email.
 
 ### Features
@@ -27,8 +27,13 @@ The main features that should be implemented
 ### The rules
 
 - Follow the [designs in Figma][figma] as closely as possible
-- Use **only** the packages provided in the package.json 
+- Use **only** the packages provided in the package.json. You dont have to use all of them, 
+  but we ask for you not to add any additional
 - Site should have a simple responsive design
+- Site should work in the latest Chrome on Mac OS
+- Fork the repo to your own account, make it public and send us the repo url when you are completed. We will
+  clone and run the site on our local.
 
 
+[movieDB]: https://developers.themoviedb.org/3/getting-started/introduction
 [figma]: https://www.figma.com/file/KKkrDYSUAuRavpqRingRdZ/Movie-Grid?node-id=0%3A1
