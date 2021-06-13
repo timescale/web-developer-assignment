@@ -9,7 +9,7 @@ to help. Happy hacking!
 
 ## Assignment
 
-![Screenshot](./src/images/screenshot.png)
+![Screenshot](./src/assets/images/screenshot.png)
 
 You are tasked with building a movie discovery app built in react. This app will
 display movies in a grid and give the user more information when they click on
