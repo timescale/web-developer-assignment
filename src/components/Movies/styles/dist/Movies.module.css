@@ -1,0 +1,193 @@
+.Modal {
+  height: 90%;
+  width: 90%;
+  padding: 0;
+  margin: 0 auto;
+  background: #eee;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1rem;
+  z-index: 1000;
+}
+@media only screen and (max-width: 800px) {
+  .Modal {
+    height: 100%;
+    width: 100%;
+  }
+}
+.Modal__information {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: "center";
+  align-items: "center";
+  -ms-justify-content: "center";
+  -ms-align-items: "center";
+}
+@media only screen and (max-width: 800px) {
+  .Modal__information {
+    flex-direction: column;
+    align-items: space-between;
+  }
+}
+.Modal__information .image {
+  height: 100%;
+  width: auto;
+  min-width: 60%;
+}
+@media only screen and (max-width: 800px) {
+  .Modal__information .image {
+    height: 40%;
+    width: 100%;
+    min-width: unset;
+    min-height: 40%;
+  }
+}
+.Modal__information .image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+}
+@media only screen and (max-width: 800px) {
+  .Modal__information .image img {
+    border-radius: unset;
+  }
+}
+.Modal__information .details {
+  height: 100%;
+  width: auto;
+  padding: 0 1rem;
+  margin: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  -ms-justify-content: space-evenly;
+  -ms-align-items: center;
+  min-width: 30%;
+  text-align: center;
+  flex-direction: column;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+@media only screen and (max-width: 800px) {
+  .Modal__information .details {
+    height: auto;
+    width: 90%;
+    padding: 0;
+    margin: 0 auto;
+    min-width: unset;
+    min-height: 40%;
+  }
+}
+.Modal__information .details p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -ms-justify-content: space-between;
+  -ms-align-items: center;
+  width: 100%;
+}
+.Modal__information .details p span {
+  padding: 0.5rem 1rem;
+  margin: 0;
+  font-weight: bold;
+  background: white;
+  color: black;
+  border-radius: 0.4rem;
+}
+.Modal__information .details__overview {
+  height: auto;
+  width: 100%;
+  padding: 1rem 0.5rem;
+  margin: 0;
+  flex-direction: column;
+  min-height: 20%;
+  text-align: justify;
+  line-height: 2rem;
+  overflow-x: auto;
+  font-weight: lighter;
+}
+@media only screen and (max-width: 800px) {
+  .Modal__information .details__overview {
+    min-height: 15%;
+  }
+}
+.Modal__information .details .closeBtn {
+  height: 100%;
+  width: 100%;
+}
+.Modal__information .details .closeBtn button {
+  height: auto;
+  width: 10%;
+  padding: 1rem;
+  margin: 0 auto;
+  border-radius: 0.4rem;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  background: #97271a;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media only screen and (max-width: 800px) {
+  .Modal__information .details .closeBtn button {
+    left: unset;
+    right: 0;
+    width: 20%;
+  }
+}
+
+.Open {
+  display: block;
+  transform: translate(-50%, -50%);
+}
+
+.Close {
+  display: none;
+  transform: translate(-50%, -100%);
+}
+
+.Movies {
+  height: auto;
+  width: 90%;
+  padding: 2rem 0;
+  margin: 2% auto;
+  min-height: 70vh;
+  overflow-y: auto;
+  position: relative;
+}
+.Movies .Movie {
+  height: auto;
+  width: auto;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: auto;
+  gap: 1rem;
+}
+.Movies .FoundSearch {
+  display: none;
+}
+.Movies .NoSearch {
+  padding: 2rem;
+  margin: 0 auto;
+  height: auto;
+  width: auto;
+  display: grid;
+  place-items: center;
+  display: block;
+  background: #97271a;
+  color: white;
+  border-radius: 0.7rem;
+  font-size: 3rem;
+  font-weight: bold;
+  transition: transform 2s ease-in-out;
+}

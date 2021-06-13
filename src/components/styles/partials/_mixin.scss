@@ -1,0 +1,28 @@
+@mixin displayFlex($jc : 'center', $ai : 'center') {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    -ms-justify-content: $jc;
+    -ms-align-items: $ai;
+}
+
+@mixin displayGrid($gr, $gc) {
+    display: grid;
+    grid-template-columns: $gc;
+    grid-template-rows: $gr;
+}
+
+@mixin centeredGrid() {
+    display: grid;
+    place-items: center;
+}
+
+@mixin heightWidth($height : 100%, $width: 100%) {
+    height: $height;
+    width: $width;
+}
+
+@mixin paddingMargin($padding : 0, $margin: 0) {
+    padding: $padding;
+    margin: $margin;
+}

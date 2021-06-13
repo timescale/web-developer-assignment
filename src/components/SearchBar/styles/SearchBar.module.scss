@@ -1,0 +1,13 @@
+@import "../../styles/partials/mixin";
+@import "../../styles/partials/colors";
+
+.Search {
+    @include heightWidth(auto, auto);
+
+    input {
+        @include paddingMargin(.5rem 1rem);
+        border: 1px solid $primaryBlack;
+        border-radius: .7rem;
+        outline: none;
+    }
+}

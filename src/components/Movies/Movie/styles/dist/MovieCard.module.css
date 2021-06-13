@@ -1,0 +1,49 @@
+.Card {
+  display: flex;
+  justify-content: "center";
+  align-items: "center";
+  -ms-justify-content: "center";
+  -ms-align-items: "center";
+  flex-direction: column;
+  min-height: 15rem;
+  width: 200px;
+  background: #eee;
+  text-align: center;
+  border-radius: 1rem;
+  position: relative;
+  box-shadow: 2px 0px 2px 2px #eee;
+  cursor: pointer;
+}
+.Card__poster {
+  height: auto;
+  width: 100%;
+  min-height: 90%;
+}
+.Card__poster___image {
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+}
+.Card__rating {
+  height: 2rem;
+  width: 2rem;
+  display: grid;
+  place-items: center;
+  border: 2px solid black;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 1%;
+  left: 5%;
+}
+.Card__details {
+  height: auto;
+  width: 100%;
+  background: white;
+  font-weight: bold;
+  min-height: 10%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-radius: 0.5rem;
+}

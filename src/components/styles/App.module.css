@@ -1,0 +1,44 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body .Container {
+  padding: 0;
+  margin: 0;
+  height: auto;
+  width: 100%;
+}
+
+body .Container header {
+  height: 3rem;
+  width: 90%;
+  padding: 0 0 1rem;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-justify-content: space-between;
+  -ms-align-items: center;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 5%;
+  border-bottom: 2px solid #eee;
+  z-index: 500;
+}
+
+@media only screen and (max-width: 800px) {
+  body .Container header {
+    height: auto;
+    width: 100%;
+    left: 0;
+  }
+}
+/*# sourceMappingURL=App.module.css.map */

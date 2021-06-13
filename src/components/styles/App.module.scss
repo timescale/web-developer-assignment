@@ -1,0 +1,29 @@
+@import "../styles/partials/mixin";
+@import "../styles/partials/mediaQueries";
+@import "../styles/partials/colors";
+
+body {
+    @include paddingMargin();
+
+    .Container {
+        @include paddingMargin();
+        @include heightWidth(auto);
+
+        header {
+            @include heightWidth(3rem, 90%);
+            @include paddingMargin(0 0 1rem, 0 auto);
+            @include displayFlex(space-between, center);
+            background-color: $primaryWhite;
+            position: fixed;
+            top: 0;
+            left: 5%;
+            border-bottom: 2px solid $primaryGrey;
+            z-index: 500;
+
+            @include responsive(medium-screens) {
+                @include heightWidth(auto);
+                left: 0;
+            }
+        }
+    }
+}

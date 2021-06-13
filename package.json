@@ -7,6 +7,8 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.1",
+    "dote": "^1.1.0",
+    "env-cmd": "^10.1.0",
     "moment": "^2.29.1",
     "node-sass": "^6.0.0",
     "react": "^17.0.2",
@@ -16,8 +18,8 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "env-cmd -f .env.sample react-scripts start",
+    "build": "env-cmd -f .env.sample react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

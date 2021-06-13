@@ -1,0 +1,47 @@
+@import "../../../styles/partials/mixin";
+@import "../../../styles/partials/colors";
+
+.Card {
+    @include displayFlex();
+    flex-direction: column;
+    min-height: 15rem;
+    width: 200px;
+    background: $primaryGrey;
+    text-align: center;
+    border-radius: 1rem;
+    position: relative;
+    box-shadow: 2px 0px 2px 2px $primaryGrey;
+    cursor: pointer;
+
+    &__poster {
+        @include heightWidth(auto, 100%);
+        min-height: 90%;
+
+        &___image {
+            @include heightWidth();
+            border-radius: 1rem;
+        }
+    }
+
+    &__rating {
+        @include heightWidth(2rem, 2rem);
+        @include centeredGrid();
+        border: 2px solid $primaryBlack;
+        background: $primaryWhite;
+        border-radius: 50%;
+        position: absolute;
+        top: 1%;
+        left: 5%;
+    }
+
+    &__details {
+        @include heightWidth(auto, 100%);
+        background: $primaryWhite;
+        font-weight: bold;
+        min-height: 10%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border-radius: .5rem;
+    }
+}

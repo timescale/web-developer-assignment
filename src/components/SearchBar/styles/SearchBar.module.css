@@ -1,0 +1,13 @@
+.Search {
+  height: auto;
+  width: auto;
+}
+
+.Search input {
+  padding: 0.5rem 1rem;
+  margin: 0;
+  border: 1px solid black;
+  border-radius: .7rem;
+  outline: none;
+}
+/*# sourceMappingURL=SearchBar.module.css.map */

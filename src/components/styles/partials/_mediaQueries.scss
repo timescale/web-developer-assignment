@@ -1,0 +1,16 @@
+$width-small: 400px;
+$width-medium: 800px;
+
+@mixin responsive($width) {
+    @if $width==medium-screens {
+        @media only screen and (max-width: $width-medium) {
+            @content;
+        }
+    }
+
+    @else if $width==small-screens {
+        @media only screen and (max-width: $width-small) {
+            @content;
+        }
+    }
+}
