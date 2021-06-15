@@ -1,0 +1,117 @@
+.Modal__information {
+  height: 100%;
+  width: 90%;
+  padding: 1rem 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: space-between;
+  -ms-justify-content: flex-start;
+  -ms-align-items: space-between;
+  flex-direction: column;
+  position: relative;
+}
+@media only screen and (max-width: 800px) {
+  .Modal__information {
+    align-items: space-between;
+  }
+}
+.Modal__information___top {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -ms-justify-content: space-between;
+  -ms-align-items: center;
+}
+.Modal__information___top .closeBtn {
+  padding: 0.2rem;
+  margin: 0;
+  height: auto;
+  width: auto;
+  border: 1px solid #252729;
+  position: relative;
+  background: transparent;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
+}
+.Modal__information___top .closeBtn button {
+  padding: 0.5rem 0.7rem;
+  margin: 0;
+  cursor: pointer;
+  border: none;
+  background: inherit;
+}
+.Modal__information___top .closeBtn button:focus {
+  border: none;
+  outline: none;
+}
+.Modal__information___top .closeBtn button::before, .Modal__information___top .closeBtn button::after {
+  content: "";
+  position: absolute;
+  height: 80%;
+  width: 0.2rem;
+  background: #252729;
+}
+.Modal__information___top .closeBtn button::before {
+  top: 8%;
+  left: 40%;
+  transform: rotate(45deg) translateX(50%);
+}
+.Modal__information___top .closeBtn button::after {
+  top: 12%;
+  right: 45%;
+  transform: rotate(-45deg);
+}
+.Modal__information___top .closeBtn:hover {
+  opacity: 0.5;
+}
+.Modal__information___bottom {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  -ms-justify-content: space-between;
+  -ms-align-items: flex-start;
+}
+@media only screen and (max-width: 800px) {
+  .Modal__information___bottom {
+    flex-direction: column;
+    overflow: auto;
+  }
+}
+.Modal__information___bottom .image {
+  height: auto;
+  width: 100%;
+  margin-right: 2rem;
+}
+@media only screen and (max-width: 800px) {
+  .Modal__information___bottom .image {
+    margin-right: unset;
+  }
+}
+.Modal__information___bottom .image img {
+  height: 100%;
+  width: 100%;
+}
+.Modal__information___bottom .Information {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.Modal__information___bottom .Information__text {
+  font-size: 1.3rem;
+}
+.Modal__information___bottom .Information__text span {
+  font-weight: bolder;
+}
+.Modal__information___bottom .Information__overview {
+  line-height: 2rem;
+  overflow: auto;
+  height: 50%;
+  text-align: justify;
+}

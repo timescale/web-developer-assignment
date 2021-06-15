@@ -2,124 +2,20 @@
 @import "../../styles/partials/mediaQueries";
 @import "../../styles/partials/colors";
 
-
 .Modal {
-    @include heightWidth(90%, 90%);
+    @include heightWidth(80%, 50%);
     @include paddingMargin(0, 0 auto);
     background: $primaryGrey;
+    color: $primaryBlack;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 1rem;
     z-index: 1000;
 
     @include responsive(medium-screens) {
         @include heightWidth();
     }
-
-    &__information {
-        @include heightWidth();
-        @include displayFlex();
-
-        @include responsive(medium-screens) {
-            flex-direction: column;
-            align-items: space-between;
-        }
-
-        .image {
-            @include heightWidth(100%, auto);
-            min-width: 60%;
-
-            @include responsive(medium-screens) {
-                @include heightWidth(40%, 100%);
-                min-width: unset;
-                min-height: 40%;
-            }
-
-            img {
-                @include heightWidth();
-                border-radius: 1rem;
-
-                @include responsive(medium-screens) {
-                    border-radius: unset;
-                }
-            }
-        }
-
-        .details {
-            @include heightWidth(100%, auto);
-            @include paddingMargin(0 1rem);
-            @include displayFlex(space-evenly, center);
-            min-width: 30%;
-            text-align: center;
-            flex-direction: column;
-            font-size: 1.3rem;
-            font-weight: bold;
-
-            @include responsive(medium-screens) {
-                @include heightWidth(auto, 90%);
-                @include paddingMargin(0, 0 auto);
-                min-width: unset;
-                min-height: 40%;
-            }
-
-            p {
-                @include displayFlex(space-between, center);
-                width: 100%;
-
-                span {
-                    @include paddingMargin(.5rem 1rem);
-                    font-weight: bold;
-                    background: $primaryWhite;
-                    color: $primaryBlack;
-                    border-radius: .4rem;
-
-                }
-            }
-
-            &__overview {
-                @include heightWidth(auto);
-                @include paddingMargin(1rem .5rem);
-                flex-direction: column;
-                min-height: 20%;
-                text-align: justify;
-                line-height: 2rem;
-                overflow-x: auto;
-                font-weight: lighter;
-
-                @include responsive(medium-screens) {
-                    min-height: 15%;
-                }
-            }
-
-            .closeBtn {
-                @include heightWidth();
-
-                button {
-                    @include heightWidth(auto, 10%);
-                    @include paddingMargin(1rem, 0 auto);
-                    border-radius: .4rem;
-                    color: $primaryWhite;
-                    font-size: 1.2rem;
-                    font-weight: bold;
-                    cursor: pointer;
-                    border: none;
-                    background: $card-button;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-
-                    @include responsive(medium-screens) {
-                        left: unset;
-                        right: 0;
-                        width: 20%;
-                    }
-                }
-            }
-        }
-    }
-
 }
 
 .Open {
@@ -139,12 +35,22 @@
     overflow-y: auto;
     position: relative;
 
+    &__text {
+        font-size: 1.5rem;
+        line-height: 3rem
+    }
+
     .Movie {
         @include heightWidth(auto, auto);
         @include paddingMargin(0, 0);
         @include centeredGrid();
         @include displayGrid(auto, repeat(auto-fit, minmax(200px, 1fr)));
-        gap: 1rem;
+        row-gap: 1rem;
+        column-gap: .3rem;
+
+        @include responsive(medium-screens) {
+            @include displayGrid(auto, repeat(auto-fit, minmax(1fr, 1fr)));
+        }
     }
 
     .FoundSearch {

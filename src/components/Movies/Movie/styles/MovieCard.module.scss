@@ -1,17 +1,23 @@
 @import "../../../styles/partials/mixin";
+@import "../../../styles/partials/mediaQueries";
 @import "../../../styles/partials/colors";
 
 .Card {
     @include displayFlex();
     flex-direction: column;
-    min-height: 15rem;
+    min-height: 20rem;
     width: 200px;
     background: $primaryGrey;
     text-align: center;
-    border-radius: 1rem;
     position: relative;
-    box-shadow: 2px 0px 2px 2px $primaryGrey;
+    box-shadow: 2px 2px 2px 3px $primaryGrey;
     cursor: pointer;
+    border-radius: .5rem;
+    transition: transform .3s ease-in-out;
+
+    @include responsive(medium-screens) {
+        width: 100%;
+    }
 
     &__poster {
         @include heightWidth(auto, 100%);
@@ -19,7 +25,7 @@
 
         &___image {
             @include heightWidth();
-            border-radius: 1rem;
+            border-radius: .5rem;
         }
     }
 
@@ -42,6 +48,9 @@
         position: absolute;
         bottom: 0;
         right: 0;
-        border-radius: .5rem;
+    }
+
+    &:hover {
+        transform: translate(3%, -3%);
     }
 }

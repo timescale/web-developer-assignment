@@ -9,6 +9,7 @@ import styles from "./styles/SearchBar.module.css";
 const SearchBar = ({ placeholder, onChange, value }) => {
   return (
     <div className={styles.Search}>
+      <div className={styles.search_icon}></div>
       <InputGroup
         onChange={onChange}
         type="search"

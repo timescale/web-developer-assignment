@@ -14,15 +14,25 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-height: 15rem;
+  min-height: 20rem;
   width: 200px;
   background: #eee;
   text-align: center;
-  border-radius: 1rem;
   position: relative;
-  -webkit-box-shadow: 2px 0px 2px 2px #eee;
-          box-shadow: 2px 0px 2px 2px #eee;
+  -webkit-box-shadow: 2px 2px 2px 3px #eee;
+          box-shadow: 2px 2px 2px 3px #eee;
   cursor: pointer;
+  border-radius: .5rem;
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+
+@media only screen and (max-width: 800px) {
+  .Card {
+    width: 100%;
+  }
 }
 
 .Card__poster {
@@ -34,7 +44,7 @@
 .Card__poster___image {
   height: 100%;
   width: 100%;
-  border-radius: 1rem;
+  border-radius: .5rem;
 }
 
 .Card__rating {
@@ -60,6 +70,10 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  border-radius: .5rem;
+}
+
+.Card:hover {
+  -webkit-transform: translate(3%, -3%);
+          transform: translate(3%, -3%);
 }
 /*# sourceMappingURL=MovieCard.module.css.map */

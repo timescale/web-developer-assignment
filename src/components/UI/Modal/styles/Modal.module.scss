@@ -1,0 +1,113 @@
+@import "../../../styles/partials/mixin";
+@import "../../../styles/partials/mediaQueries";
+@import "../../../styles/partials/colors";
+
+
+.Modal__information {
+    @include heightWidth(100%, 90%);
+    @include paddingMargin(1rem 0, 0 auto);
+    @include displayFlex(flex-start, space-between);
+    flex-direction: column;
+    position: relative;
+
+    @include responsive(medium-screens) {
+        align-items: space-between;
+    }
+
+    &___top {
+        @include heightWidth(auto);
+        @include displayFlex(space-between, center);
+
+        .closeBtn {
+            @include paddingMargin(.2rem);
+            @include heightWidth(auto, auto);
+            border: 1px solid $primaryBlur;
+            position: relative;
+            background: transparent;
+            opacity: 1;
+            transition: opacity .3s ease-in-out;
+            cursor: pointer;
+
+            button {
+                @include paddingMargin(.5rem .7rem);
+                cursor: pointer;
+                border: none;
+                background: inherit;
+
+                &:focus {
+                    border: none;
+                    outline: none;
+                }
+
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    @include heightWidth(80%, .2rem);
+                    background: $primaryBlur;
+                }
+
+                &::before {
+                    top: 8%;
+                    left: 40%;
+                    transform: rotate(45deg) translateX(50%);
+                }
+
+                &::after {
+                    top: 12%;
+                    right: 45%;
+                    transform: rotate(-45deg);
+                }
+
+            }
+
+            &:hover {
+                opacity: .5;
+            }
+
+        }
+    }
+
+    &___bottom {
+        @include heightWidth();
+        @include displayFlex(space-between, flex-start);
+
+        @include responsive(medium-screens) {
+            flex-direction: column;
+            overflow: auto;
+        }
+
+        .image {
+            @include heightWidth(auto);
+            margin-right: 2rem;
+
+            @include responsive(medium-screens) {
+                margin-right: unset;
+            }
+
+            img {
+                @include heightWidth();
+            }
+        }
+
+        .Information {
+            @include heightWidth();
+            @include paddingMargin();
+
+            &__text {
+                font-size: 1.3rem;
+
+                span {
+                    font-weight: bolder;
+                }
+            }
+
+            &__overview {
+                line-height: 2rem;
+                overflow: auto;
+                height: 50%;
+                text-align: justify;
+            }
+        }
+    }
+}

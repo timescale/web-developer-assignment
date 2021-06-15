@@ -3,11 +3,25 @@
 
 .Search {
     @include heightWidth(auto, auto);
+    position: relative;
+
+    .search_icon {
+        @include heightWidth(5rem, 1rem);
+        position: absolute;
+        top: 30%;
+        left: 5%;
+
+        background : {
+            image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFkSURBVHgBnZJNTsJAFMffmwH8iCYeoZ4APIHlBnAD2EiIq8YPbNx0o40oqRvT6AZvAJzAegO8QbkBrhDozHMmATMgjan/xcxk5v3e5yCsyfO6B4W9ma3PJJP4+vJ0CClCE9rdnwfqpkIE0eK1pDc5FWXXbcYbYd8PLbbF3whg8IV5z3Pq46WB3wlrHHkghKi6F83oF9zuvHQJaNQ6a3ib0vPvQ5tx3ptg/tB0zHRUUqlOWOERUqQjKptoR85q5j2DHFgIODQ9bhJJMSCGxVWYgSWRYviHNBwhgf2XIQd+TJJGK7DrNGPV5fj24bmSBi76YgOTr6uR9ZLMHc6we9N+Kq2Dev5qjD1A7OtA5tvPJ7nTkRkGqoRIje1DghyrbhYRqSYR+rq0JJlXzR/HlofWeaMvUZQFiHcCLKKqUTn4FCiOrpyTOiowl8v3zOwQMqitQFIOlhlkgtcdZIa1/CC0prA9/gazbp6vp6NjwQAAAABJRU5ErkJggg==);
+            repeat: no-repeat;
+        }
+    }
 
     input {
         @include paddingMargin(.5rem 1rem);
         border: 1px solid $primaryBlack;
-        border-radius: .7rem;
+        border-radius: .3rem;
+        text-indent: 1rem;
         outline: none;
     }
 }
