@@ -1,6 +1,6 @@
 import Axios from 'axios'
-const BaseUrl = "https://api.themoviedb.org/3/movie/top_rated"
-const SearchUrl = "https://api.themoviedb.org/3/search/movie"
+const BaseUrl = process.env.REACT_APP_MOVIE_BASE_URL
+const SearchUrl = process.env.REACT_APP_MOVIE_SEARCH_URL
 const ApiKey = process.env.REACT_APP_MOVIE_DB_API_KEY;
 
 const getData = async (pageNo) => {
