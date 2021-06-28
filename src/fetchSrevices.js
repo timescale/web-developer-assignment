@@ -1,7 +1,7 @@
 import Axios from 'axios'
 const BaseUrl = "https://api.themoviedb.org/3/movie/top_rated"
 const SearchUrl = "https://api.themoviedb.org/3/search/movie"
-const ApiKey = "7315ec59ea2264da1fa4f4eb8d647853"
+const ApiKey = process.env.REACT_APP_MOVIE_DB_API_KEY;
 
 const getData = async (pageNo) => {
     try {
