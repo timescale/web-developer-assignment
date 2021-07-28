@@ -20,7 +20,7 @@ and will include the API key for you to add to the `.env` in the initial email.
 
 The main features that should be implemented
 - On the initial visit to the site, it will show the most recent movies
-- Allow users to put in a search term and display the results (from the movie database, not from the initial set of movies!) in the same grid
+- Allow users to put in a search term and display the results (from the movie database) in the same grid
 - When a user clicks on one of the cards, open a modal and display more information about the movie
 
 
