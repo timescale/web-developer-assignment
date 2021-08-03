@@ -1,0 +1,148 @@
+@import url("https://pro.fontawesome.com/releases/v5.10.0/css/all.css");
+
+body {
+    margin: 0;
+    
+}
+.header {
+    padding: 10px 15px;
+    box-shadow: 0px 0px 5px #d4d4d4;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+    background: #fff;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    max-width: 260px;
+    margin: 20px auto;
+  }
+
+.card:hover {
+    box-shadow: 0 25px 40px 0 rgba(0,0,0,0.2);
+  }
+
+.img {
+    width: 100%;
+    max-height: 250px;
+
+  }
+
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+   width: 100%;
+  }
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px;
+}
+.gridlayout {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 30px;
+    grid-column-gap: 25px;
+
+    @media(max-width:990px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media(max-width:480px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .input {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('../images/searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+
+  .model {
+    width: 50%;
+    margin: 20px;
+    border: 1px gray solid;
+    background-color: white;
+    padding:10px
+  }
+  .p {
+      padding: 0;
+      margin: 0;
+  }
+  .blur {
+    filter: blur(4px);    
+}
+.alignModel {
+    position: fixed;
+    width: 100%;
+    height: 50%;
+    left: 325px;
+    top: 250px;
+    @media (max-width:480px) {
+      left: 65px;
+      top: 50px;
+    }
+}
+.center {
+  padding-top: 70px;
+}
+.w {
+  width: 45%;
+  @media(max-width:480px) {
+    width: 100%;
+}
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  @media(max-width:480px) {
+    display: block;
+    justify-content: center;
+}
+}
+.radius {
+  border-radius: 72px;
+  background-color: white;
+  border: 1px solid;
+  padding: 2px;
+}
+.position {
+  position: absolute;
+  padding-left: 10px;
+}
+.noData {
+  display: flex;
+  justify-content: center;
+  padding-top: 150px;
+  font-weight: bold;
+  font-size: x-large;
+  color: red;
+}
