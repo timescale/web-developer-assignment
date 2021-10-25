@@ -1,7 +1,11 @@
-import logo from './logo.svg';
+import logo from '../images/logo.svg';
+import HomePage from './home';
 
 const App = () => (
-	<img src={logo} alt="Timescale" />
+	<div>
+		<img src={logo} alt="Timescale" />
+		<HomePage />
+	</div>
 )
 
 export default App;
