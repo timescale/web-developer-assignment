@@ -1,5 +1,6 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
+import axios from "axios";
+import styled from "styled-components";
 import MovieCard from "./movie_card";
 
 const HomePage = () => {
@@ -23,9 +24,13 @@ const HomePage = () => {
     return fetchData();
   }, []);
 
+  const Header = styled.h1`
+    font-family: Inter;
+  `;
+
   return (
     <div className="movie-index">
-        <h1>Most Recent Movies</h1>
+        <Header>Most Recent Movies</Header>
       <ul className="movie-index-list">
         {movieList.map((movie) => (
           <MovieCard movieInfo={movie} />

@@ -1,12 +1,14 @@
 .main {
-    width: 83vw;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: royalblue;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .movie-index {
-    display: flex; 
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  width: 85vw;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .movie-index-list {
@@ -14,5 +16,5 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 3vh;
   padding: 0;
-      justify-items: center;
+  justify-items: center;
 }
