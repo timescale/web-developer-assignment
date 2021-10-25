@@ -7,7 +7,6 @@
 .movie-index {
     display: flex; 
     flex-direction: column;
-    justify-content: center;
 }
 
 .movie-index-list {
@@ -15,4 +14,5 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 3vh;
   padding: 0;
+      justify-items: center;
 }
