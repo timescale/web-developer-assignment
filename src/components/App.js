@@ -1,9 +1,9 @@
-import logo from '../images/logo.svg';
+import NavBar from './navbar';
 import HomePage from './home';
 
 const App = () => (
-	<div>
-		<img src={logo} alt="Timescale" />
+	<div className="main">
+		<NavBar />
 		<HomePage />
 	</div>
 )

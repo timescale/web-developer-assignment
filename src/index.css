@@ -1,0 +1,18 @@
+.main {
+    width: 83vw;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: royalblue;
+}
+.movie-index {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+}
+
+.movie-index-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 3vh;
+  padding: 0;
+}
