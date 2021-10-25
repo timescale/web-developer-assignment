@@ -3,6 +3,16 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.nav-bar {
+  width: 85vw;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 2vh;
+}
 .movie-index {
   display: flex;
   flex-direction: column;
@@ -17,4 +27,29 @@
   grid-gap: 3vh;
   padding: 0;
   justify-items: center;
+}
+
+/* MODAL */
+.modal-pop {
+  background: #fff;
+  border: 2px solid #aaa;
+  border-radius: 5px;
+  z-index: 999;
+  max-width: 420px;
+  padding: 1em 2em 2em;
+  position: absolute;
+  margin: -10% auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  background-color: #000;
+  opacity: 0.75;
 }

@@ -3,6 +3,7 @@ import axios from "axios";
 import styled from "styled-components";
 import MovieCard from "./movie_card";
 
+
 const HomePage = () => {
   const [movieList, setMovieList] = useState([]);
 
@@ -26,14 +27,15 @@ const HomePage = () => {
 
   const Header = styled.h1`
     font-family: Inter;
+    font-size: 1.9rem;
   `;
 
   return (
     <div className="movie-index">
-        <Header>Most Recent Movies</Header>
+      <Header>Most Recent Movies</Header>
       <ul className="movie-index-list">
         {movieList.map((movie) => (
-          <MovieCard movieInfo={movie} />
+          <MovieCard movieInfo={movie}/>
         ))}
       </ul>
     </div>

@@ -1,12 +1,18 @@
 import React from "react";
 import styled from "styled-components";
+import Modal from "./modal";
+import useModal from "./useModal";
 
 const MovieCard = (props) => {
-  const Title = styled.h1`
+  const {toggle, visible} = useModal();
+
+  const Title = styled.div`
     font-size: 1.3rem;
     text-align: center;
     font-family: Inter;
     font-weight: 100;
+    overflow: auto;
+    flex-grow: 1;
   `;
 
   const Wrapper = styled.div`
@@ -16,6 +22,10 @@ const MovieCard = (props) => {
     overflow: hidden;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: hidden;
   `;
 
   const Image = styled.img`
@@ -35,17 +45,19 @@ const MovieCard = (props) => {
     background: white;
     border: 1px solid black;
     text-align: center;
+    flex-shrink: 0;
   `;
 
   const { title, vote_average, poster_path } = props.movieInfo;
   return (
-    <Wrapper>
+    <Wrapper onClick={toggle}>
       <Badge>{vote_average}</Badge>
       <Image
         src={`https://image.tmdb.org/t/p/original/${poster_path}`}
         alt="movie-poster"
       />
       <Title>{title}</Title>
+      <Modal toggle={toggle} visible={visible} movieInfo={props.movieInfo}/>
     </Wrapper>
   );
 };
