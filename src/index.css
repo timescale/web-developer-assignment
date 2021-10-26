@@ -13,7 +13,7 @@
   border-bottom: 1px solid lightgrey;
   padding-bottom: 2vh;
 }
-.movie-index {
+.movie-grid-container {
   display: flex;
   flex-direction: column;
   width: 85vw;
@@ -21,7 +21,7 @@
   margin-right: auto;
 }
 
-.movie-index-list {
+.movie-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 3vh;

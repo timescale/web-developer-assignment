@@ -6,6 +6,5 @@ export default async function getMovies() {
   );
 
   const movies = await response;
-//   const json = await response.json();
   return movies.data.results
 };
