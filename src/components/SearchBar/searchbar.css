@@ -1,4 +1,34 @@
+.form {
+  display: flex;
+  flex-direction: row-reverse;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  justify-content: space-between;
+  align-content: center;
+  color: lightgray;
+  position: relative;
+  overflow: hidden;
+  font-family: "Inter";
+}
+
+.search-field {
+  width: 100%;
+  padding: 10px 35px 10px 30px;
+  outline: none;
+  border: none;
+  color: lightgray;
+}
+
+.search-button {
+  background: transparent;
+  border: none;
+  outline: none;
+  position: absolute;
+}
+
 .search-icon {
-    width: 10px;
-    height: 10px;
+  height: 54%;
+  position: absolute;
+  top: 25.5%;
+  left: 4%;
 }
