@@ -1,8 +1,8 @@
 import React, { useState, useCallback } from "react";
-import "./searchbar.css";
 import search from "../../images/search.png";
 import getMovies from "../../utils/getMovies";
 import debounce from "../../utils/debounceFunction";
+import "./searchbar.css";
 
 const SearchBar = (props) => {
   const [dropdown, setDropdown] = useState([]);
@@ -33,18 +33,17 @@ const SearchBar = (props) => {
   };
 
   const handleSubmit = (e) => {
-      e.preventDefault()
-      getSearch(input)
-      setInput("")
-      setDropdown([])
-  }
+    e.preventDefault();
+    getSearch(input);
+    setInput("");
+    setDropdown([]);
+  };
 
   return (
     <div>
       <form className="form" onSubmit={handleSubmit}>
         <input
           className="search-field"
-          id="input"
           onInput={(e) => setInput(e.target.value)}
           value={input}
           type="text"
@@ -55,7 +54,7 @@ const SearchBar = (props) => {
       </form>
       <div className="search-dropdown">
         <ul className="search-results">
-          {input.length 
+          {input.length
             ? dropdown.map((movie, i) => {
                 return (
                   <li
@@ -64,7 +63,6 @@ const SearchBar = (props) => {
                       handleClick(i);
                     }}
                   >
-                    {" "}
                     {movie.title}
                   </li>
                 );

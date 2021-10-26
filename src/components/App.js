@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import NavBar from "./navbar";
-import MovieGrid from "./movie_grid";
+import NavBar from "./NavBar/navbar";
+import MovieGrid from "./Movies/movie_grid";
 import SearchBar from "./SearchBar/search_bar";
 import getMovies from "../utils/getMovies";
 
@@ -9,22 +9,24 @@ const App = () => {
   const [searchResults, setSearchResults] = useState([]);
 
   const movieList = searchResults.length ? searchResults : recentMovies;
-  const header = searchResults.length ? "Search Results" : "Recent Movies";
+  const header = searchResults.length ? "Search Results" : "Most Recent Movies";
   const request = searchResults.length ? "search" : "recent";
   const action = searchResults.length ? setSearchResults : setRecentMovies;
- 
+
   useEffect(() => {
     getMovies(request).then((res) => {
       action(res);
     });
   }, []);
 
-  console.log("list", movieList)
+  console.log("list", movieList);
   return (
     <div className="main">
-      <NavBar />
-      <SearchBar setSearchResults={setSearchResults}/>
-      <MovieGrid header={header} movieList={movieList}/>
+      <div className="nav-container">
+        <NavBar />
+        <SearchBar setSearchResults={setSearchResults} />
+      </div>
+      <MovieGrid header={header} movieList={movieList} />
     </div>
   );
 };

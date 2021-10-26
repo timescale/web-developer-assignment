@@ -1,11 +1,8 @@
 import React from "react";
-import styled from "styled-components";
+import { Header } from './movieComponents'
+
 import MovieCard from "./movie_card";
 
-const Header = styled.h1`
-  font-family: Inter;
-  font-size: 1.9rem;
-`;
 
 const MovieGrid = ({ movieList, header }) => {
   return (

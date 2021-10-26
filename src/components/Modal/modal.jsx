@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import closeicon from "../images/close-icon.svg";
+import closeicon from "../../images/close-icon.svg";
+import "./modal.css"
 
 const Modal = ({ visible, toggle, movieInfo }) => {
   const {

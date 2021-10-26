@@ -1,0 +1,9 @@
+.nav-container {
+  width: 85vw;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 2vh;
+}
