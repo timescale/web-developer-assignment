@@ -45,12 +45,10 @@
   overflow-y: auto;
 }
 
-.movie-info-header {
-}
-
 .movie-info-body {
-  padding-right: 1rem;
+  padding: 1.5rem 1rem 1.5rem 0rem;
 }
 
-.movie-rating {
+.close-x {
+  cursor: pointer;
 }

@@ -23,7 +23,7 @@ const App = () => {
   return (
     <div className="main">
       <div className="nav-container">
-        <NavBar />
+        <NavBar setSearchResults={setSearchResults} />
         <SearchBar setSearchResults={setSearchResults} />
       </div>
       <MovieGrid header={header} movieList={movieList} />

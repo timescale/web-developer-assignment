@@ -26,6 +26,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   height: 55vh;
   width: 100%;
+  cursor: pointer;
 `;
 
 export const Image = styled.img`

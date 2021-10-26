@@ -30,14 +30,19 @@ const SearchBar = (props) => {
 
   const handleClick = (i) => {
     props.setSearchResults([dropdown[i]]);
+    clearInputField();
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     getSearch(input);
+    clearInputField();
+  };
+
+  const clearInputField = () => {
     setInput("");
     setDropdown([]);
-  };
+  }
 
   return (
     <div>
@@ -55,7 +60,7 @@ const SearchBar = (props) => {
       <div className="search-dropdown">
         <ul className="search-results">
           {input.length
-            ? dropdown.map((movie, i) => {
+            ? dropdown.slice(10).map((movie, i) => {
                 return (
                   <li
                     key={i}

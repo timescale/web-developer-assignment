@@ -19,7 +19,7 @@ const Modal = ({ visible, toggle, movieInfo }) => {
           <div className="modal" role="dialog" aria-modal="true">
             <div className="modal-header">
               <h3>{title}</h3>
-              <img src={closeicon} alt="close-x" onClick={toggle} />
+              <img className="close-x" src={closeicon} alt="close-x" onClick={toggle} />
             </div>
             <div className="modal-content">
               <img

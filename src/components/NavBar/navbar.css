@@ -7,3 +7,7 @@
   border-bottom: 1px solid lightgrey;
   padding: 2vh;
 }
+
+.timescale-logo {
+  cursor: pointer;
+}

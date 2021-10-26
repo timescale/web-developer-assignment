@@ -49,7 +49,6 @@
   background-color: white;
   opacity: 0.9;
   z-index: 1;
-  /* border: 1px solid lightgrey; */
 }
 
 .search-results li {
@@ -58,4 +57,9 @@
   text-decoration: none;
   display: block;
   border-bottom: 1px solid lightgray;
+  cursor: pointer;
+}
+
+.search-results li:hover {
+  background: lightgray;
 }
