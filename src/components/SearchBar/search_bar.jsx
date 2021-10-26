@@ -6,6 +6,7 @@ import debounce from "../../utils/debounceFunction";
 
 const SearchBar = (props) => {
   const [dropdown, setDropdown] = useState([]);
+  const [input, setInput] = useState("");
 
   const getSearch = async (query) => {
     await getMovies("search", query).then((res) => {
@@ -22,7 +23,6 @@ const SearchBar = (props) => {
   const handleInput = (e) => {
     if (e.target.value === "") {
       props.setSearchResults([]);
-      setDropdown([]);
     }
     const query = e.target.value.split(" ").join("+");
     debounceDropdown(query);
@@ -34,8 +34,9 @@ const SearchBar = (props) => {
 
   const handleSubmit = (e) => {
       e.preventDefault()
-      const input = document.getElementById("input")
-      getSearch(input.value)
+      getSearch(input)
+      setInput("")
+      setDropdown([])
   }
 
   return (
@@ -44,6 +45,8 @@ const SearchBar = (props) => {
         <input
           className="search-field"
           id="input"
+          onInput={(e) => setInput(e.target.value)}
+          value={input}
           type="text"
           onChange={handleInput}
           placeholder="Search for a movie"
@@ -52,7 +55,7 @@ const SearchBar = (props) => {
       </form>
       <div className="search-dropdown">
         <ul className="search-results">
-          {dropdown.length
+          {input.length 
             ? dropdown.map((movie, i) => {
                 return (
                   <li
