@@ -7,25 +7,22 @@ const MovieCard = (props) => {
   const {toggle, visible} = useModal();
 
   const Title = styled.div`
-    font-size: 1.3rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    font-size: 1.3rem;
     font-family: Inter;
-    font-weight: 100;
-    overflow: auto;
-    flex-grow: 1;
   `;
 
   const Wrapper = styled.div`
-    height: 25vw;
-    width: 20vw;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
     position: relative;
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
-    overflow: hidden;
   `;
 
   const Image = styled.img`

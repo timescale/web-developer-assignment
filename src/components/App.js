@@ -1,10 +1,10 @@
 import NavBar from './navbar';
-import HomePage from './home';
+import MovieIndex from './movie_index';
 
 const App = () => (
 	<div className="main">
 		<NavBar />
-		<HomePage />
+		<MovieIndex />
 	</div>
 )
 

@@ -4,7 +4,7 @@ import styled from "styled-components";
 import MovieCard from "./movie_card";
 
 
-const HomePage = () => {
+const MovieIndex = () => {
   const [movieList, setMovieList] = useState([]);
 
   const getMovies = () => {
@@ -34,12 +34,12 @@ const HomePage = () => {
     <div className="movie-index">
       <Header>Most Recent Movies</Header>
       <ul className="movie-index-list">
-        {movieList.map((movie) => (
-          <MovieCard movieInfo={movie}/>
+        {movieList.map((movie, i) => (
+          <MovieCard key={i} movieInfo={movie}/>
         ))}
       </ul>
     </div>
   );
 };
 
-export default HomePage;
+export default MovieIndex;
