@@ -3,9 +3,6 @@ import styled from "styled-components";
 import Modal from "./modal";
 import useModal from "./useModal";
 
-const MovieCard = (props) => {
-  const {toggle, visible} = useModal();
-
   const Title = styled.div`
     height: 100%;
     display: flex;
@@ -44,6 +41,11 @@ const MovieCard = (props) => {
     text-align: center;
     flex-shrink: 0;
   `;
+
+const MovieCard = (props) => {
+  const {toggle, visible} = useModal();
+
+
 
   const { title, vote_average, poster_path } = props.movieInfo;
   return (

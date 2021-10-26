@@ -16,11 +16,10 @@
   padding: 10px 35px 10px 30px;
   outline: none;
   border: none;
-
 }
 
 .search-field::placeholder {
-      color: lightgray;
+  color: lightgray;
 }
 
 .search-button {
@@ -35,4 +34,26 @@
   position: absolute;
   top: 25.5%;
   left: 4%;
+}
+
+.search-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.search-results {
+  position: absolute;
+  min-width: 230px;
+  background-color: white;
+  opacity: 0.9;
+  z-index: 1;
+  border: 1px solid lightgrey;
+}
+
+.search-results li {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid lightgray;
 }

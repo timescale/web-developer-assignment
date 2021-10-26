@@ -16,7 +16,6 @@ const Modal = ({ visible, toggle, movieInfo }) => {
     ? ReactDOM.createPortal(
         <div className="modal">
           <div className="modal-pop" role="dialog" aria-modal="true">
-            {console.log(movieInfo)}
             <div className="modal-header">
               <h3>{title}</h3>
               <img src={closeicon} alt="close-x" onClick={toggle} />

@@ -8,7 +8,7 @@ const MovieIndex = () => {
   const [movieList, setMovieList] = useState([]);
 
   useEffect(() => {
-      getMovies().then(res => {
+      getMovies("recent").then(res => {
           setMovieList(res)
       })
   }, []);
