@@ -1,0 +1,47 @@
+.modal-pop {
+  background: #fff;
+  z-index: 999;
+  padding: 1em 2em 2em;
+  position: absolute;
+  width: 38vw;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  background-color: #000;
+  opacity: 0.75;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+
+.modal-content {
+  display: flex;
+}
+
+.modal-image {
+  width: 40%;
+  padding-right: 2rem;
+}
+
+.movie-info-container {
+}
+
+.movie-info-header {
+}
+
+.movie-info-body {
+}
+
+.movie-rating {
+}
