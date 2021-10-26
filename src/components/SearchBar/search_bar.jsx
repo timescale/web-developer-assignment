@@ -1,41 +1,34 @@
 import React, { useState, useCallback } from "react";
-import MovieGrid from "../movie_grid";
 import "./searchbar.css";
 import search from "../../images/search.png";
-import getMovies from "../getMovies";
+import getMovies from "../../utils/getMovies";
+import debounce from "../../utils/debounceFunction";
 
-const SearchBar = () => {
-  const [searchResults, setSearchResults] = useState([]);
+const SearchBar = (props) => {
+  const [dropdown, setDropdown] = useState([]);
+  console.log(props)
 
-  const debounce = (func, timeout) => {
-    let timer;
-
-    return function () {
-      let ctx = this;
-      let args = arguments;
-      clearTimeout(timer);
-
-      timer = setTimeout(() => {
-        func.apply(ctx, args);
-      }, timeout);
-    };
+  const getSearch = async (query) => {
+    await getMovies("search", query).then((res) => {
+      setDropdown(res);
+      props.setSearchResults(res)
+    });
   };
 
-  
-  
-  const getSearch = async(query) => {
-      await getMovies("search", query).then((res) => {
-          console.log(res)
-          setSearchResults(res);
-        });
-    };
-    
-    const debounceDropdown = useCallback(debounce((nextValue) => getSearch(nextValue), 500), [])
+  const debounceDropdown = useCallback(
+    debounce((nextValue) => getSearch(nextValue), 500),
+    []
+  );
 
   const handleInput = (e) => {
+    if(e.target.value === "") {
+        props.setSearchResults([])
+        setDropdown([])
+    }
     const query = e.target.value.split(" ").join("+");
     debounceDropdown(query);
   };
+
 
   return (
     <div>
@@ -48,16 +41,15 @@ const SearchBar = () => {
         />
         <img className="search-icon" src={search} alt="search-img" />
       </form>
-      {/* <div className="search-dropdown">
+      <div className="search-dropdown">
         <ul className="search-results">
-          {searchResults.length
-            ? searchResults.map((movie, i) => {
+          {dropdown.length
+            ? dropdown.map((movie, i) => {
                 return <li key={i}> {movie.title}</li>;
               })
             : []}
         </ul>
-      </div> */}
-      <MovieGrid header={"Search Results"} movieList={searchResults}/>
+      </div>
     </div>
   );
 };

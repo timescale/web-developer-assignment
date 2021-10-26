@@ -6,7 +6,7 @@ const NavBar = () => {
   return (
     <div className="nav-bar">
       <img src={logo} alt="Timescale" />
-      <SearchBar/>
+      {/* <SearchBar/> */}
     </div>
   );
 };

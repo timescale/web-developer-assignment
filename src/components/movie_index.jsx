@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import getMovies from "./getMovies"
+import getMovies from "../utils/getMovies"
 import MovieGrid from "./movie_grid";
 
 
