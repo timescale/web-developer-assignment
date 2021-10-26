@@ -5,5 +5,5 @@
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid lightgrey;
-  padding-bottom: 2vh;
+  padding: 2vh;
 }

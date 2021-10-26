@@ -1,14 +1,16 @@
-.modal-pop {
+.modal {
   background: #fff;
   z-index: 999;
   padding: 1em 2em 2em;
-  position: absolute;
+  position: fixed;
   width: 38vw;
-  top: 57%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 25%;
+  bottom: 40px;
+  left: calc(50% - 21vw);
+  height: 55%;
+  font-family: "Inter";
 }
-.modal-overlay {
+.modal-background {
   position: fixed;
   top: 0;
   left: 0;
@@ -22,25 +24,32 @@
 .modal-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 1.5rem;
+  height: 12%;
+  font-weight: bold;
 }
 
 .modal-content {
   display: flex;
+  height: 88.5%;
 }
 
 .modal-image {
-  width: 40%;
+  width: 42%;
   padding-right: 2rem;
 }
 
 .movie-info-container {
+  line-height: 1.5rem;
+  overflow-y: auto;
 }
 
 .movie-info-header {
 }
 
 .movie-info-body {
+  padding-right: 1rem;
 }
 
 .movie-rating {

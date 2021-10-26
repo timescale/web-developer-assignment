@@ -2,23 +2,5 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 4vh;
 }
-
-
-.movie-grid-container {
-  display: flex;
-  flex-direction: column;
-  width: 85vw;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.movie-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 3vh;
-  padding: 0;
-  justify-items: center;
-}
-
-

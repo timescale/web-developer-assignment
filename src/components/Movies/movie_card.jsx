@@ -2,7 +2,7 @@ import React from "react";
 import Modal from "../Modal/modal";
 import useModal from "../Modal/useModal";
 import { Wrapper, Badge, Image, Title } from "./movieComponents";
-
+import "./movie.css";
 
 const MovieCard = (props) => {
   const {toggle, visible} = useModal();

@@ -16,7 +16,7 @@ const Modal = ({ visible, toggle, movieInfo }) => {
   return visible
     ? ReactDOM.createPortal(
         <div className="modal">
-          <div className="modal-pop" role="dialog" aria-modal="true">
+          <div className="modal" role="dialog" aria-modal="true">
             <div className="modal-header">
               <h3>{title}</h3>
               <img src={closeicon} alt="close-x" onClick={toggle} />
@@ -39,7 +39,7 @@ const Modal = ({ visible, toggle, movieInfo }) => {
               </div>
             </div>
           </div>
-          <div className="modal-overlay"></div>
+          <div className="modal-background"></div>
         </div>,
         document.body
       )

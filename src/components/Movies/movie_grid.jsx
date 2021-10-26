@@ -1,7 +1,7 @@
 import React from "react";
-import { Header } from './movieComponents'
-
+import { Header } from './movieComponents';
 import MovieCard from "./movie_card";
+import "./movie.css";
 
 
 const MovieGrid = ({ movieList, header }) => {
