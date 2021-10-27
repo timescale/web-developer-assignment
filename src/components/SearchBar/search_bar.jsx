@@ -16,7 +16,7 @@ const SearchBar = (props) => {
   };
 
   const debounceDropdown = useCallback(
-    debounce((nextValue) => getSearch(nextValue), 500),
+    debounce((nextValue) => getSearch(nextValue), 400),
     []
   );
 
@@ -57,24 +57,6 @@ const SearchBar = (props) => {
         />
         <img className="search-icon" src={search} alt="search-img" />
       </form>
-      <div className="search-dropdown">
-        <ul className="search-results">
-          {input.length
-            ? dropdown.slice(10).map((movie, i) => {
-                return (
-                  <li
-                    key={i}
-                    onClick={() => {
-                      handleClick(i);
-                    }}
-                  >
-                    {movie.title}
-                  </li>
-                );
-              })
-            : []}
-        </ul>
-      </div>
     </div>
   );
 };
