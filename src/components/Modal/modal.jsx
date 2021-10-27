@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import closeicon from "../../images/close-icon.svg";
-import "./modal.css"
+import moment from "moment";
+import "./modal.css";
 
 const Modal = ({ visible, toggle, movieInfo }) => {
   const {
@@ -12,14 +13,18 @@ const Modal = ({ visible, toggle, movieInfo }) => {
     release_date,
     title,
   } = movieInfo;
-
   return visible
     ? ReactDOM.createPortal(
         <div className="modal">
           <div className="modal" role="dialog" aria-modal="true">
             <div className="modal-header">
               <h3>{title}</h3>
-              <img className="close-x" src={closeicon} alt="close-x" onClick={toggle} />
+              <img
+                className="close-x"
+                src={closeicon}
+                alt="close-x"
+                onClick={toggle}
+              />
             </div>
             <div className="modal-content">
               <img
@@ -30,7 +35,7 @@ const Modal = ({ visible, toggle, movieInfo }) => {
               <div className="movie-info-container">
                 <p className="movie-info-header">
                   <strong>Release date: </strong>
-                  {release_date}
+                  {moment(release_date).format("LL")}
                 </p>
                 <p className="movie-info-body">{overview}</p>
                 <p className="movie-rating">
