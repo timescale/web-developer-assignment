@@ -19,7 +19,6 @@ const App = () => {
     });
   }, []);
 
-  console.log("list", movieList);
   return (
     <div className="main">
       <div className="nav-container">
