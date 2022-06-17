@@ -5,7 +5,7 @@ We are asking applicants to build a small form in React. This exercise should ta
 
 ## Assignment
 
-You are tasked with building a signup form. 
+You are tasked with building a signup form.
 
 Please take a component-first approach: create a form, input, checkbox and button component. Use these components to create the form. Then, use storybook to document at least one of the components.
 
@@ -29,5 +29,6 @@ The main features that should be implemented
 - Site should have a simple responsive design
 - Site should work in the latest Chrome on Mac OS
 - Fork the repo to your own account, make it public and send us the repo url when you are completed. We will clone and run the site on our local.
+- Feel free to use any library listed in the package.json.
 
 [figma]: https://www.figma.com/file/xdOy5L4dmMeEQpeJsbmp5K/Senior-Web-Dev-Assignment?node-id=0%3A1
