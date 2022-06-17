@@ -5,11 +5,11 @@ We are asking applicants to build a small form in React. This exercise should ta
 
 ## Assignment
 
-![Screenshot](./src/images/screenshot.png)
-
-You are tasked with building the above form. Please take a component-first approach: create a form, input, checkbox and button component. Use these components to create the form above. Then, use storybook to document at least one of the components.
+You are tasked with building a signup form. Please take a component-first approach: create a form, input, checkbox and button component. Use these components to create the form above. Then, use storybook to document at least one of the components.
 
 Please do not use external libraries for the form and validations (Formik, Yup, etc).
+
+We will be focusing on code quality, code cleanliness and extensibility.
 
 ### Features
 
